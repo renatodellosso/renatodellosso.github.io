@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+a {
+  @apply underline hover:decoration-secondary transition-colors;
+}
+
+ul {
+  @apply list-disc list-inside ml-4;
+}
