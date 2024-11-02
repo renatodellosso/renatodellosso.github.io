@@ -5,8 +5,6 @@ export const metadata = {
   title: "Blog"
 }
 
-const POST_PATH = "./app/blog/posts";
-
 function Post({ post }: { post: PostMetadata & { slug: string } }) {
   return (
     <li>
@@ -16,6 +14,8 @@ function Post({ post }: { post: PostMetadata & { slug: string } }) {
     </li>
   )
 }
+
+const POST_PATH = "";
 
 export default function Blog() {
   const files = fs.readdirSync(POST_PATH).map(f => `${POST_PATH}/${f}`);
