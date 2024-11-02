@@ -1,4 +1,4 @@
-import { PostMetadata } from "@/lib/PostTypes";
+import { PostMetadata, PostTag } from "@/lib/PostTypes";
 import * as fs from "fs";
 import Link from "next/link";
 export const metadata = {
@@ -30,8 +30,17 @@ export default function Blog() {
 
     const post = require(`./posts${file.replace(POST_PATH, "")}`).metadata as PostMetadata;
 
-    if (!post.description || !post.tags || !post.date) {
+    if (!post.title || !post.description || !post.tags || !post.date) {
       throw new Error(`Post ${file} is missing required metadata. Metadata provided: ${JSON.stringify(post)}`);
+    }
+
+    if (new Date(post.date).toString() === "Invalid Date") {
+      throw new Error(`Post ${file} has an invalid date: ${post.date}`);
+    }
+
+    const invalidTags = post.tags.filter(tag => !Object.values(PostTag).includes(tag));
+    if (invalidTags.length) {
+      throw new Error(`Post ${file} has invalid tags: ${invalidTags.join(", ")}`);
     }
 
     posts.push({
