@@ -20,7 +20,7 @@ const POST_PATH = "./app/blog/posts";
 export default function Blog() {
   console.log(fs.readdirSync(POST_PATH));
 
-  const files = fs.readdirSync(POST_PATH).map(f => `${POST_PATH}/${f}`);
+  const files = fs.existsSync(POST_PATH) ? fs.readdirSync(POST_PATH).map(f => `${POST_PATH}/${f}`) : [];
   const posts: (PostMetadata & { slug: string })[] = [];
 
   for (const file of files) {
