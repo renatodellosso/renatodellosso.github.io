@@ -15,13 +15,14 @@ function Post({ post }: { post: PostMetadata & { slug: string } }) {
   )
 }
 
-const POST_PATH = "";
+const POST_PATH = "./app/blog/posts";
 
 export default function Blog() {
   const files = fs.readdirSync(POST_PATH).map(f => `${POST_PATH}/${f}`);
   const posts: (PostMetadata & { slug: string })[] = [];
 
-  // 0 evaluates to false
+  console.log(files);
+
   for (const file of files) {
     if (fs.statSync(file).isDirectory()) {
       files.push(...fs.readdirSync(file).map(f => `${file}/${f}`));
