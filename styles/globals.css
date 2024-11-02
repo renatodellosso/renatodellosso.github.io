@@ -33,3 +33,11 @@ a {
 ul {
   @apply list-disc list-inside ml-4;
 }
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-lg;
+}
