@@ -5,10 +5,10 @@ export default function Home() {
 		<main className="flex justify-center">
 			<div className="flex flex-col justify-center w-1/2">
 				<h1 className="text-2xl">
-					Hi, I'm <span className="text-accent">Renato</span>.
+					Hi, I&apos;m <span className="text-accent">Renato</span>.
 				</h1>
 				<div>
-					I'm a{" "}
+					I&apos;m a{" "}
 					<Link href="https://github.com/renatodellosso">
 						software engineer
 					</Link>
@@ -36,12 +36,12 @@ export default function Home() {
 					</ul>
 				</div>
 				<div>
-					When I'm not coding, you may find me playing Dungeons &
+					When I&apos;m not coding, you may find me playing Dungeons &
 					Dragons, video games, Magic: The Gathering; reading a book;
 					or pondering what code I should write next.
 				</div>
 				<div className="w-[150%]">
-					<h1 className="text-2xl">What I'm working on</h1>
+					<h1 className="text-2xl">What I&apos;m working on</h1>
 					<ul>
 						<li>This website</li>
 					</ul>
