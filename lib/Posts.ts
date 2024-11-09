@@ -16,7 +16,7 @@ export type PostMetadata = Metadata & {
 
 export type PostMetadataWithSlug = PostMetadata & { slug: string };
 
-const POST_PATH = "./app/blog/posts";
+const POST_PATH = "../app/blog/posts";
 
 export function getPostList(): PostMetadataWithSlug[] {
 	const files = fs.existsSync(POST_PATH)
@@ -30,7 +30,7 @@ export function getPostList(): PostMetadataWithSlug[] {
 			continue;
 		}
 
-		const post = require(`./posts${file.replace(POST_PATH, "")}`)
+		const post = require(`.././posts${file.replace(POST_PATH, "")}`)
 			.metadata as PostMetadata;
 
 		if (!post.title || !post.description || !post.tags || !post.date) {

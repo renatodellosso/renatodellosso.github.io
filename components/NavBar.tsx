@@ -16,7 +16,7 @@ export default function NavBar() {
 				Home
 			</Link>
 			{anyPosts && (
-				<Link className="text-xl decoration-transparent" href="/blog">
+				<Link className="text-xl decnoration-transparent" href="/blog">
 					Blog
 				</Link>
 			)}
