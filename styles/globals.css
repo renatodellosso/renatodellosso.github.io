@@ -34,6 +34,10 @@ ul {
   @apply list-disc list-inside ml-4;
 }
 
+h1 {
+  @apply text-3xl;
+}
+
 h2 {
   @apply text-2xl;
 }

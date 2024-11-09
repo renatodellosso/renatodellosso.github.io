@@ -1,0 +1,54 @@
+export const metadata = {
+	title: "A Game Design Analysis of RMUD2",
+	description:
+		"A retrospective and analysis of design choices in my text-based MMO, RMUD2.",
+	date: "2024-11-02",
+	tags: ["Game Design"],
+};
+
+# A Game Design Analysis of RMUD2
+
+11/2/2024
+
+People (well, a person, maybe two on a good day) sometimes ask me about RMUD2 (Renato's Multi-User Dungeon 2), a text-based MMO
+I made a while ago. Their questions are often along the lines of "Can you bring the server back up?" so I'm dodging that question and
+instead investigating what kind of game RMUD2 is.
+
+I mostly just winged the design of RMUD2, so I'm not going to delve into why I made the choices I did because I frankly
+don't know.
+
+With that summary out of the way, let's jump in and see if I came up with any insightful commentary today. Spoiler: probably not.
+
+## What kind of game is RMUD2?
+
+Well, for starters, it's a text-based MMO. The game is displayed through text and player click buttons to control their character.
+There is/was a single server with all players inhabiting the same instance. So far, pretty simple: RMUD2 is a single-shard text-based
+MMO.
+
+It's also at least notionally an RPG. Players kill monsters to earn XP, which increases their level, thus letting them increase their ability
+scores. However, that's basically it. There aren't classes, skills, or other trappings of a full RPG. It definitely does not have the same
+feel as a CRPG like Pillars of Eternity or the original Baldur's Gate games; the RPG elements are closer to a watered-down Skyrim (itself a
+watered-down version of full RPGs). Thus, we can add RPG-lite to list of descriptors: a single-shard text-based MMORPG-lite.
+
+Now that we've covered what you *don't* do in RMUD2, let's talk about what you do do. You enter the dungeon. Once in the dungeon, you explore
+rooms and fight monsters. Not so different from one of the aforementioned CRPGs. However, once you finish your monster-homicide, things start
+to diverge meaningfully. If you've ever played a CRPG, you'll remember all the random items you got from monsters. "Kobold Claws," "Bandit 
+Meat," and "Assorted Not-Precious Gems." You'll usually be able to craft with these items, through a submenu inside a dropdown hidden away 
+in a tab on the secondary inventory screen's bottom left corner, but you'll never actually craft anything. Why would you? There's no special
+items to be gotten from crafting and the game's balance seems fine without crafting. Crafting might as well not exist in these
+games.
+
+RMUD2 is *not* those games. You can buy gear from the low-single-digit number of shopkeepers, but it peaks somewhere around "Rusty Stick."
+The real gear is in the crafting station next to the shopkeeper. In other games, you got to the Michelin-starred restaurant that is the local
+blacksmith, but in RMUD2, you go to the local McDonald's, walk past the confused employees, and cook a filet mignon on their grill. Basically,
+the blacksmith is useless, but their anvil sure isn't: the anvil is where you craft the gear that gets you into mid-game. The rest of RMUD2
+is similar, just with higher-tier crafting stations and 12-step recipes requiring three eyeballs from a hell-orc's half-uncle.
+
+Now that you've gotten your orc eyeballs, you need to get back to town where you can use them to craft a new breastplate. Two threats
+may object to your return: the dungeon's monsters and other players. Players are fully able to attack each other, except in the town.
+So RMUD2 has elements of an extraction shooter (minus the shooting). However, death does not result in you actually dropping your inventory,
+so it's much calmer than most extraction shooters.
+
+We've now covered all the major elements of RMUD2's gameplay. So what do we have? RMUD2 is a PvPvE single-shard text-based MMORPG-lite 
+focused around simple combat and crafting and is fairly casual. I suspect that casualness helped get some of my friends to play it, as 
+it doesn't have too many elements of any particular genre.
